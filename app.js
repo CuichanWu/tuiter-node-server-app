@@ -6,13 +6,13 @@ import TuitsController from "./controllers/tuits/tuits-controller.js";
 import mongoose from "mongoose";
 // import ProfileController from "./controllers/profile/profile-controller.js";
 
-const CONNECTION_STRING =
-  process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/tuiter";
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING;
 mongoose.connect(CONNECTION_STRING);
 // mongoose.connect(
 //   "mongodb+srv://wucu:password1234@cluster0.crnolej.mongodb.net/?retryWrites=true&w=majority"
 // );
 // Dr1UXimHFX2sZks
+// || "mongodb://127.0.0.1:27017/tuiter"
 const app = express();
 app.use(cors());
 app.use(express.json());
