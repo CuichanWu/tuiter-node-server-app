@@ -13,6 +13,7 @@ mongoose.connect(CONNECTION_STRING);
 // );
 // Dr1UXimHFX2sZks
 // || "mongodb://127.0.0.1:27017/tuiter"
+// DB_CONNECTION_STRING=mongodb+srv://wucu:password1234@cluster0.crnolej.mongodb.net/tuiter?retryWrites=true&w=majority
 const app = express();
 app.use(cors());
 app.use(express.json());
