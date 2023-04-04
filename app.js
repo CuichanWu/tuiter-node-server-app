@@ -6,7 +6,10 @@ import TuitsController from "./controllers/tuits/tuits-controller.js";
 import mongoose from "mongoose";
 // import ProfileController from "./controllers/profile/profile-controller.js";
 
-mongoose.connect("mongodb://127.0.0.1:27017/tuiter");
+const CONNECTION_STRING =
+  process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/tuiter";
+mongoose.connect(CONNECTION_STRING);
+// mongoose.connect("mongodb://127.0.0.1:27017/tuiter");
 const app = express();
 app.use(cors());
 app.use(express.json());
