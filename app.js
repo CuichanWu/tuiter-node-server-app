@@ -6,7 +6,8 @@ import TuitsController from "./controllers/tuits/tuits-controller.js";
 import mongoose from "mongoose";
 // import ProfileController from "./controllers/profile/profile-controller.js";
 
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING;
+const CONNECTION_STRING =
+  "mongodb+srv://wucu:password1234@cluster0.crnolej.mongodb.net/tuiter?retryWrites=true&w=majority";
 console.log(CONNECTION_STRING);
 mongoose.connect(CONNECTION_STRING);
 // mongoose.connect(
